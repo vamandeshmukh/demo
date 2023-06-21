@@ -16,4 +16,8 @@ public class DemoApplication {
 /*
 netstat -ano | findstr :<PORT>
 taskkill /PID <PID> /F
+
+netstat -ano | findstr :8080
+taskkill /PID 12345 /F
+
 */
