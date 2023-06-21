@@ -27,6 +27,11 @@ public class Hello {
 		return "Lending you loans...";
 	}
 
+	@RequestMapping("/bank")
+	public String bank() {
+		System.out.println("Bank");
+		return "Bank with Citi Bank";
+	}
 
 
 }
