@@ -1,9 +1,12 @@
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import com.google.gson.Gson;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -11,12 +14,11 @@ public class Hello {
 
 //	copy without the two slashes 
 //	http://localhost:8080/hello
-	
 
-	@RequestMapping("/emp")
-	public Employee emp() {
+	@GetMapping("/emp")
+	public String emp() {
 		System.out.println("emp");
-		return new Employee(101, "Sonu", 90000);
+		return new Gson().toJson(new Employee(101, "Sonu", 90000));
 	}
 
 	@RequestMapping("/hello")
